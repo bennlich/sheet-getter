@@ -16,7 +16,7 @@ mySheetGetter.getSheet('Animals with fraudulent diplomas')
   .catch((err) => console.error(err));
 ```
 
-See [the example directory](example).
+See [the example server](example).
 
 ## Methods
 
@@ -32,11 +32,11 @@ Returns the date the sheet was last modified. Uses the [files](https://developer
 
 You need to setup three things:
 
-1) Get the ID of your google sheet
+1) [Get the ID of your google sheet](#spreadsheet-id)
 
-2) Create a google cloud project, google service account, and download a credentials JSON file
+2) [Create a google cloud project, google service account, and download a credentials JSON file](#service-account--credentials-json)
 
-3) Enable the google sheets and google drive APIs for your project
+3) [Enable the google sheets and google drive APIs for your project](#enable-google-sheets--drive-apis)
 
 ### Spreadsheet ID
 
