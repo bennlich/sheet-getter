@@ -1,0 +1,23 @@
+{
+  "name": "sheet-getter",
+  "version": "1.0.0",
+  "description": "tiny helper for using the google sheets API in node.js",
+  "main": "SheetGetter.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cms",
+    "google",
+    "sheets",
+    "nodejs"
+  ],
+  "author": "Benny Lichtner",
+  "license": "ISC",
+  "dependencies": {
+    "googleapis": "^47.0.0"
+  }
+}
