@@ -6,8 +6,10 @@ SheetGetter is a tiny nodejs class that helps you fetch data from google sheets.
 let creds = JSON.parse(fs.readFileSync('service-account-creds-file-aweu54ug4igu.json'));
 let sheetId = '1mjz4A4RzXN0hHj3Ww-nUOtk-WSrsi9B5-GvA-ZEuAKA';
 
+// Create a SheetGetter instance associated with a specific google sheet
 let mySheetGetter = new SheetGetter(sheetId, creds);
 
+// Fetch a specific tab from the associated sheet
 mySheetGetter.getSheet('Animals with fraudulent diplomas')
   .then((res) => {
     let rows = res.data.values;
