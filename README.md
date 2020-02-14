@@ -5,7 +5,9 @@ SheetGetter is a tiny nodejs class that helps you fetch data from google sheets.
 ```javascript
 let creds = JSON.parse(fs.readFileSync('service-account-creds-file-aweu54ug4igu.json'));
 let sheetId = '1mjz4A4RzXN0hHj3Ww-nUOtk-WSrsi9B5-GvA-ZEuAKA';
+
 let mySheetGetter = new SheetGetter(sheetId, creds);
+
 mySheetGetter.getSheet('Animals with fraudulent diplomas')
   .then((res) => {
     let rows = res.data.values;
@@ -15,6 +17,16 @@ mySheetGetter.getSheet('Animals with fraudulent diplomas')
 ```
 
 See [the example directory](example).
+
+## Methods
+
+### `getSheet(sheetName)`
+
+Returns an array of all rows of the tab named `sheetName`. Uses the [`spreadsheets.values/get`](https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets.values/get) endpoint of the sheets v4 API. See [rate limits](https://developers.google.com/sheets/api/limits).
+
+### `getLastModified()`
+
+Returns the date the sheet was last modified. Uses the [files](https://developers.google.com/drive/api/v3/reference/files/get) endpoint of the drive v3 API. See [rate limits](https://console.cloud.google.com/apis/api/drive.googleapis.com/quotas).
 
 ## Setup
 
