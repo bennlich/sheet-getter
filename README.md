@@ -1,4 +1,4 @@
-SheetGetter is a tiny nodejs class that helps you fetch data from google sheets.
+SheetGetter is a tiny nodejs class that helps you fetch data from google sheets. Half of the utility of this repo is probably in the screenshots below that show you how to set up all of the credentialing razzmatazz.
 
 ## Example Usage
 
